@@ -50,8 +50,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # The path used after sign up.
   def after_sign_up_path_for(resource)
-    #super(resource)
-    "users/#{current_user.id}/edit" #takes users to the edit page after signing up
+    super(resource)
+    "/users/#{current_user.id}/edit"
   end
 
   # The path used after sign up for inactive accounts.
