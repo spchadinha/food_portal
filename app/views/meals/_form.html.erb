@@ -1,3 +1,6 @@
+
+<% if current_user.admin == true %>
+
 <%= form_for(@meal) do |f| %>
   <% if @meal.errors.any? %>
     <div id="error_explanation">
@@ -30,4 +33,48 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+<% end %>
+
+
+
+
+<% elsif @meal.user_id == current_user.id || @meal.user_id == nil %>
+  
+<%= form_for(@meal) do |f| %>
+  <% if @meal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@meal.errors.count, "error") %> prohibited this meal from being saved:</h2>
+
+      <ul>
+      <% @meal.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :organic %><br>
+    <%= f.check_box :organic %>
+  </div>
+    <%= f.hidden_field :user_id, value: current_user.id %>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+
+
+
+
+<% else %>
+  <h2>Your shall not pass</h2>
 <% end %>

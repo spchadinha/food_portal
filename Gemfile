@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'figaro'
 # bootstrap
 gem 'bootstrap-sass', '~> 3.3.5'
 # devise for authentication

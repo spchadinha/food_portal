@@ -1,3 +1,5 @@
+
+<% if current_user.admin %>
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Users</h1>
@@ -6,7 +8,6 @@
   <thead>
     <tr>
       <th>Rest name</th>
-      <th>Admin</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,7 +16,6 @@
     <% @users.each do |user| %>
       <tr>
         <td><%= user.rest_name %></td>
-        <td><%= user.admin %></td>
         <td><%= link_to 'Show', user %></td>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -27,3 +27,8 @@
 <br>
 
 <%= link_to 'New User', new_user_path %>
+
+<% else %>
+<h1>You no Admin!!!!</h1>
+<% end -%>
+

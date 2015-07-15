@@ -1,3 +1,5 @@
+
+<% if current_user.admin || @user.id == current_user.id %>
 <%= form_for(@user) do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
@@ -12,14 +14,14 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :rest_name %><br>
-    <%= f.text_field :rest_name %>
-  </div>
-  <div class="field">
-    <%= f.label :admin %><br>
-    <%= f.check_box :admin %>
+    <%= f.label "Please add your restaurant's name" %><br>
+    <%= f.text_field :rest_name, placeholder:"ex. Zouper Kitchen", class: "form-control" %>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+
+<% else %>
+<h1>You do not have access</h1>
+<% end -%>

@@ -4,7 +4,12 @@ class MealsController < ApplicationController
   # GET /meals
   # GET /meals.json
   def index
-    @meals = Meal.all
+    
+    if current_user.admin == true
+      @meals = Meal.all
+    else
+      @meals = current_user.meals
+    end
   end
 
   # GET /meals/1
