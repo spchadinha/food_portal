@@ -10,9 +10,13 @@
   <%= @meal.price %>
 </p>
 
+
+
 <p>
-  <strong>Organic:</strong>
-  <%= @meal.organic %>
+  <strong>Tags:</strong>
+  <% @meal.tag_list.each do |tag| %>
+  	<p><%= tag %></p>
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_meal_path(@meal) %> |

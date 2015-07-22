@@ -14,21 +14,24 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, placeholder: "Name of Dish", class: "form-control" %>
   </div>
-  <div class="field">
+   <div class="field form-group">
     <%= f.label :price %><br>
-    <%= f.text_field :price %>
+    <%= f.text_field :price, placeholder: "Price", class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :organic %><br>
-    <%= f.check_box :organic %>
-  </div>
-  <div class="field">
+  <% @tags.each do |tag| %>
+     <div class="field">
+      <%= f.label tag %>
+      <%= f.check_box :tag_list, { multiple: true}, tag, nil %>
+    </div>
+  <% end %>
+
+   <div class="field form-group">
     <%= f.label "Restaurant" %>
-    <%= f.collection_select :user_id, User.all, :id, :rest_name %>
+    <%= f.collection_select :user_id, User.all, :id, :rest_name, class: "form-control" %>
   </div>
   <div class="actions">
     <%= f.submit %>
@@ -61,10 +64,17 @@
     <%= f.label :price %><br>
     <%= f.text_field :price %>
   </div>
-  <div class="field">
-    <%= f.label :organic %><br>
-    <%= f.check_box :organic %>
-  </div>
+
+  <% @tags.each do |tag| %>
+    <div class="field">
+      <%= f.label tag %>
+      <%= f.check_box :tag_list, { multiple: true}, tag, nil %>
+    </div>
+  <% end %>
+
+
+
+
     <%= f.hidden_field :user_id, value: current_user.id %>
   <div class="actions">
     <%= f.submit %>

@@ -1,5 +1,11 @@
 source 'https://rubygems.org'
 
+
+gem 'bootstrap_form'
+# make things taggable
+gem 'acts-as-taggable-on', '~> 3.4'
+
+# 
 gem 'figaro'
 # bootstrap
 gem 'bootstrap-sass', '~> 3.3.5'
