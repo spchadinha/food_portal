@@ -1,0 +1,4 @@
+class AddCobAndCbfAndClsAndIfoAndDcbAndEuoAndFacAndMscAndMbaAndPhcAndRacAndUsdaAndEftAndFfsAndFlAndFAndFwAndFjcAndSpsAndAgaAndAhcAndAwaAndChrAndGap < ActiveRecord::Migration
+  def change
+  end
+end

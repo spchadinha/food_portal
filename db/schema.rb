@@ -11,17 +11,46 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150722151006) do
+ActiveRecord::Schema.define(version: 20150723201727) do
 
   create_table "meals", force: :cascade do |t|
     t.string   "name"
     t.float    "price"
     t.boolean  "organic"
     t.string   "labels"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.integer  "user_id"
     t.text     "tag"
+    t.text     "ingredients"
+    t.string   "category"
+    t.boolean  "local"
+    t.boolean  "scratch"
+    t.boolean  "cob"
+    t.boolean  "cbf"
+    t.boolean  "cls"
+    t.boolean  "ifo"
+    t.boolean  "dcb"
+    t.boolean  "euo"
+    t.boolean  "fac"
+    t.boolean  "msc"
+    t.boolean  "mba"
+    t.boolean  "phc"
+    t.boolean  "rac"
+    t.boolean  "usda"
+    t.boolean  "eft"
+    t.boolean  "ffs"
+    t.boolean  "fl"
+    t.boolean  "f"
+    t.boolean  "fw"
+    t.boolean  "fjc"
+    t.boolean  "sps"
+    t.boolean  "aga"
+    t.boolean  "ahc"
+    t.boolean  "awa"
+    t.boolean  "chr"
+    t.boolean  "gap"
+    t.text     "ingredient"
   end
 
   create_table "taggings", force: :cascade do |t|
@@ -60,6 +89,11 @@ ActiveRecord::Schema.define(version: 20150722151006) do
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.string   "hours"
+    t.text     "categories"
+    t.string   "address"
+    t.decimal  "score"
+    t.text     "description"
+    t.text     "website"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

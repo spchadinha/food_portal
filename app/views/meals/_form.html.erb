@@ -22,12 +22,40 @@
     <%= f.label :price %><br>
     <%= f.text_field :price, placeholder: "Price", class: "form-control" %>
   </div>
-  <% @tags.each do |tag| %>
-     <div class="field">
-      <%= f.label tag %>
-      <%= f.check_box :tag_list, { multiple: true}, tag, nil %>
-    </div>
-  <% end %>
+
+  <div class="field form-group">
+    <%= f.label :ingredient %><br>
+    <%= f.text_area :ingredient, placeholder: "Input ingredients here", class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Sustainability Labels:" %><br>
+    <%= f.check_box :cob %><%= f.label "Canada Organic Biologique " %><br>
+    <%= f.check_box :cbf %><%= f.label "Certified Bird " %><br>
+    <%= f.check_box :cls %><%= f.label "Certified Local Sustainable" %><br>
+    <%= f.check_box :ifo %><%= f.label "IFOAM-endorsed standard Certified Organic" %><br>
+    <%= f.check_box :dcb %><%= f.label "Demeter Certified Biodynamic" %><br>
+    <%= f.check_box :euo %><%= f.label "European Union Organic" %><br>
+    <%= f.check_box :fac %><%= f.label "Food Alliance Certified" %><br>
+    <%= f.check_box :msc %><%= f.label "Marine Stewardship Council Blue Ecolabel " %><br>
+    <%= f.check_box :mba %><%= f.label "Monterey Bay Aquarium Seafood Watch \“Best Choices\” " %><br>
+    <%= f.check_box :phc %><%= f.label "Protected Harvest Certified" %><br>
+    <%= f.check_box :rac %><%= f.label "Rainforest Alliance Certified" %><br>
+    <%= f.check_box :usda %><%= f.label "USDA Certified Organic" %><br>
+    <%= f.check_box :eft %><%= f.label "Ecocert Fair Trade" %><br>
+    <%= f.check_box :ffs %><%= f.label "Fair Food Standards Council" %><br>
+    <%= f.check_box :fl %><%= f.label "Fair for Life" %><br>
+    <%= f.check_box :f %><%= f.label "Fairtrade" %><br>
+    <%= f.check_box :fw %><%= f.label "FairWild Certified" %><br>
+    <%= f.check_box :fjc %><%= f.label "Food Justice Certified " %><br>
+    <%= f.check_box :sps %><%= f.label "Small Producers’ Symbol" %><br>
+    <%= f.check_box :aga %><%= f.label "AGA Grassfed" %><br>
+    <%= f.check_box :ahc %><%= f.label "American Humane Certified" %><br>
+    <%= f.check_box :awa %><%= f.label "Animal Welfare Approved" %><br>
+    <%= f.check_box :chr %><%= f.label "Certified Humane Raised and Handled " %><br>
+    <%= f.check_box :gap %><%= f.label "Global Animal Partnership Certified" %>
+  </div>
+
 
    <div class="field form-group">
     <%= f.label "Restaurant" %>
@@ -65,12 +93,38 @@
     <%= f.text_field :price %>
   </div>
 
-  <% @tags.each do |tag| %>
-    <div class="field">
-      <%= f.label tag %>
-      <%= f.check_box :tag_list, { multiple: true}, tag, nil %>
-    </div>
-  <% end %>
+  <div class="field form-group">
+    <%= f.label :ingredient %><br>
+    <%= f.text_area :ingredient, placeholder: "Input ingredients here", class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Sustainability Labels:" %><br>
+    <%= f.check_box :cob %><%= f.label "Canada Organic Biologique " %><br>
+    <%= f.check_box :cbf %><%= f.label "Certified Bird " %><br>
+    <%= f.check_box :cls %><%= f.label "Certified Local Sustainable" %><br>
+    <%= f.check_box :ifo %><%= f.label "IFOAM-endorsed standard Certified Organic" %><br>
+    <%= f.check_box :dcb %><%= f.label "Demeter Certified Biodynamic" %><br>
+    <%= f.check_box :euo %><%= f.label "European Union Organic" %><br>
+    <%= f.check_box :fac %><%= f.label "Food Alliance Certified" %><br>
+    <%= f.check_box :msc %><%= f.label "Marine Stewardship Council Blue Ecolabel " %><br>
+    <%= f.check_box :mba %><%= f.label "Monterey Bay Aquarium Seafood Watch \“Best Choices\” " %><br>
+    <%= f.check_box :phc %><%= f.label "Protected Harvest Certified" %><br>
+    <%= f.check_box :rac %><%= f.label "Rainforest Alliance Certified" %><br>
+    <%= f.check_box :usda %><%= f.label "USDA Certified Organic" %><br>
+    <%= f.check_box :eft %><%= f.label "Ecocert Fair Trade" %><br>
+    <%= f.check_box :ffs %><%= f.label "Fair Food Standards Council" %><br>
+    <%= f.check_box :fl %><%= f.label "Fair for Life" %><br>
+    <%= f.check_box :f %><%= f.label "Fairtrade" %><br>
+    <%= f.check_box :fw %><%= f.label "FairWild Certified" %><br>
+    <%= f.check_box :fjc %><%= f.label "Food Justice Certified " %><br>
+    <%= f.check_box :sps %><%= f.label "Small Producers’ Symbol" %><br>
+    <%= f.check_box :aga %><%= f.label "AGA Grassfed" %><br>
+    <%= f.check_box :ahc %><%= f.label "American Humane Certified" %><br>
+    <%= f.check_box :awa %><%= f.label "Animal Welfare Approved" %><br>
+    <%= f.check_box :chr %><%= f.label "Certified Humane Raised and Handled " %><br>
+    <%= f.check_box :gap %><%= f.label "Global Animal Partnership Certified" %>
+  </div>
 
 
 

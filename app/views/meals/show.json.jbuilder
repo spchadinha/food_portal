@@ -1,1 +1,1 @@
-json.extract! @meal, :id, :name, :price, :tag_list, :created_at, :updated_at
+json.extract! @meal, :id, :name, :price, :ingredient, :tag_list, :cob, :cbf, :cls, :ifo, :dcb, :euo, :fac, :msc, :mba, :phc, :rac, :usda, :eft, :ffs, :fl, :f, :fw, :fjc, :sps, :aga, :ahc, :awa, :chr, :gap, :created_at, :updated_at

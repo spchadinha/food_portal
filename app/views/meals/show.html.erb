@@ -10,7 +10,86 @@
   <%= @meal.price %>
 </p>
 
+<p>
+  <strong>Ingredients:</strong>
+  <%= @meal.ingredient %>
+</p>
 
+<p>
+  <strong>Sustainaibility Labels:</strong>
+  <% if @meal.cob == true %>
+  <p>COB</p>
+  <% end %>
+  <% if @meal.cbf == true %>
+  <p>CBF</p>
+  <% end %>
+  <% if @meal.cls == true %>
+  <p>CLS</p>
+  <% end %>
+  <% if @meal.ifo == true %>
+  <p>IFO</p>
+  <% end %>
+  <% if @meal.dcb == true %>
+  <p>DCB</p>
+  <% end %>
+  <% if @meal.euo == true %>
+  <p>EUO</p>
+  <% end %>
+  <% if @meal.fac == true %>
+  <p>FAC</p>
+  <% end %>
+  <% if @meal.msc == true %>
+  <p>MSC</p>
+  <% end %>
+  <% if @meal.mba == true %>
+  <p>MBA</p>
+  <% end %>
+  <% if @meal.phc == true %>
+  <p>PHC</p>
+  <% end %>
+  <% if @meal.rac == true %>
+  <p>RAC</p>
+  <% end %>
+  <% if @meal.usda == true %>
+  <p>USDA</p>
+  <% end %>
+  <% if @meal.eft == true %>
+  <p>EFT</p>
+  <% end %>
+  <% if @meal.ffs == true %>
+  <p>FFS</p>
+  <% end %>
+  <% if @meal.fl == true %>
+  <p>FL</p>
+  <% end %>
+  <% if @meal.f == true %>
+  <p>F</p>
+  <% end %>
+  <% if @meal.fw == true %>
+  <p>FW</p>
+  <% end %>
+  <% if @meal.fjc == true %>
+  <p>FJC</p>
+  <% end %>
+  <% if @meal.sps == true %>
+  <p>SPS</p>
+  <% end %>
+  <% if @meal.aga == true %>
+  <p>AGA</p>
+  <% end %>
+  <% if @meal.ahc == true %>
+  <p>AHC</p>
+  <% end %>
+  <% if @meal.awa == true %>
+  <p>AWA</p>
+  <% end %>
+  <% if @meal.chr == true %>
+  <p>CHR</p>
+  <% end %>
+  <% if @meal.gap == true %>
+  <p>GAP</p>
+  <% end %>
+</p>
 
 <p>
   <strong>Tags:</strong>
