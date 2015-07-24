@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150723201727) do
+ActiveRecord::Schema.define(version: 20150723210145) do
 
   create_table "meals", force: :cascade do |t|
     t.string   "name"
@@ -94,6 +94,30 @@ ActiveRecord::Schema.define(version: 20150723201727) do
     t.decimal  "score"
     t.text     "description"
     t.text     "website"
+    t.boolean  "cob"
+    t.boolean  "cbf"
+    t.boolean  "cls"
+    t.boolean  "ifo"
+    t.boolean  "dcb"
+    t.boolean  "euo"
+    t.boolean  "fac"
+    t.boolean  "msc"
+    t.boolean  "mba"
+    t.boolean  "phc"
+    t.boolean  "rac"
+    t.boolean  "usda"
+    t.boolean  "eft"
+    t.boolean  "ffs"
+    t.boolean  "fl"
+    t.boolean  "f"
+    t.boolean  "fw"
+    t.boolean  "fjc"
+    t.boolean  "sps"
+    t.boolean  "aga"
+    t.boolean  "ahc"
+    t.boolean  "awa"
+    t.boolean  "chr"
+    t.boolean  "gap"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

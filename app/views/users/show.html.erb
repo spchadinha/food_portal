@@ -1,9 +1,105 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Rest name:</strong>
+  <strong>Restaurant Name:</strong>
   <%= @user.rest_name %>
 </p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<p>
+  <strong>Address:</strong>
+  <%= @user.address %>
+</p>
+
+<p>
+  <strong>Website:</strong>
+  <%= @user.website %>
+</p>
+
+<p>
+  <strong>Health Score:</strong>
+  <%= @user.score %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @user.description %>
+</p>
+
+<p>
+  <strong>Sustainaibility Labels:</strong>
+  <% if @user.cob == true %>
+  <p>COB</p>
+  <% end %>
+  <% if @user.cbf == true %>
+  <p>CBF</p>
+  <% end %>
+  <% if @user.cls == true %>
+  <p>CLS</p>
+  <% end %>
+  <% if @user.ifo == true %>
+  <p>IFO</p>
+  <% end %>
+  <% if @user.dcb == true %>
+  <p>DCB</p>
+  <% end %>
+  <% if @user.euo == true %>
+  <p>EUO</p>
+  <% end %>
+  <% if @user.fac == true %>
+  <p>FAC</p>
+  <% end %>
+  <% if @user.msc == true %>
+  <p>MSC</p>
+  <% end %>
+  <% if @user.mba == true %>
+  <p>MBA</p>
+  <% end %>
+  <% if @user.phc == true %>
+  <p>PHC</p>
+  <% end %>
+  <% if @user.rac == true %>
+  <p>RAC</p>
+  <% end %>
+  <% if @user.usda == true %>
+  <p>USDA</p>
+  <% end %>
+  <% if @user.eft == true %>
+  <p>EFT</p>
+  <% end %>
+  <% if @user.ffs == true %>
+  <p>FFS</p>
+  <% end %>
+  <% if @user.fl == true %>
+  <p>FL</p>
+  <% end %>
+  <% if @user.f == true %>
+  <p>F</p>
+  <% end %>
+  <% if @user.fw == true %>
+  <p>FW</p>
+  <% end %>
+  <% if @user.fjc == true %>
+  <p>FJC</p>
+  <% end %>
+  <% if @user.sps == true %>
+  <p>SPS</p>
+  <% end %>
+  <% if @user.aga == true %>
+  <p>AGA</p>
+  <% end %>
+  <% if @user.ahc == true %>
+  <p>AHC</p>
+  <% end %>
+  <% if @user.awa == true %>
+  <p>AWA</p>
+  <% end %>
+  <% if @user.chr == true %>
+  <p>CHR</p>
+  <% end %>
+  <% if @user.gap == true %>
+  <p>GAP</p>
+  <% end %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> 
+

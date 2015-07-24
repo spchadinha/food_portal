@@ -91,12 +91,7 @@
   <% end %>
 </p>
 
-<p>
-  <strong>Tags:</strong>
-  <% @meal.tag_list.each do |tag| %>
-  	<p><%= tag %></p>
-  <% end %>
-</p>
+
 
 <%= link_to 'Edit', edit_meal_path(@meal) %> |
 <%= link_to 'Back', meals_path %>
