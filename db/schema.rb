@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150723210145) do
+ActiveRecord::Schema.define(version: 20150727182618) do
 
   create_table "meals", force: :cascade do |t|
     t.string   "name"
@@ -118,6 +118,19 @@ ActiveRecord::Schema.define(version: 20150723210145) do
     t.boolean  "awa"
     t.boolean  "chr"
     t.boolean  "gap"
+    t.boolean  "compost"
+    t.boolean  "recycle"
+    t.boolean  "local"
+    t.boolean  "energy"
+    t.boolean  "beer"
+    t.boolean  "wine"
+    t.boolean  "donatefood"
+    t.boolean  "donatemoney"
+    t.boolean  "allergy"
+    t.boolean  "volunteer"
+    t.boolean  "cater"
+    t.string   "category"
+    t.text     "hour"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

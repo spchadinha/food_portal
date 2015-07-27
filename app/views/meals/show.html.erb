@@ -16,6 +16,11 @@
 </p>
 
 <p>
+  <strong>Menu Category:</strong>
+  <%= @meal.category %>
+</p>
+
+<p>
   <strong>Sustainaibility Labels:</strong>
   <% if @meal.cob == true %>
   <p>COB</p>
@@ -75,7 +80,7 @@
   <p>SPS</p>
   <% end %>
   <% if @meal.aga == true %>
-  <p>AGA</p>
+  <p>AGA Grass Fed Beef</p>
   <% end %>
   <% if @meal.ahc == true %>
   <p>AHC</p>

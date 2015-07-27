@@ -31,7 +31,7 @@ class MealsController < ApplicationController
   # POST /meals
   # POST /meals.json
   def create
-    params[:meal][:tag_list] = params[:meal][:tag_list].join(',')
+    # params[:meal][:tag_list] = params[:meal][:tag_list].join(',')
     @meal = Meal.new(meal_params)
 
     respond_to do |format|
@@ -77,6 +77,6 @@ class MealsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def meal_params
-      params.require(:meal).permit(:name, :price, :organic, :ingredient, :cob, :cbf, :cls, :ifo, :dcb, :euo, :fac, :msc, :mba, :phc, :rac, :usda, :eft, :ffs, :fl, :f, :fw, :fjc, :sps, :aga, :ahc, :awa, :chr, :gap, :tag_list, :user_id)
+      params.require(:meal).permit(:name, :price, :organic, :ingredient, :category, :cob, :cbf, :cls, :ifo, :dcb, :euo, :fac, :msc, :mba, :phc, :rac, :usda, :eft, :ffs, :fl, :f, :fw, :fjc, :sps, :aga, :ahc, :awa, :chr, :gap, :tag_list, :user_id)
     end
 end

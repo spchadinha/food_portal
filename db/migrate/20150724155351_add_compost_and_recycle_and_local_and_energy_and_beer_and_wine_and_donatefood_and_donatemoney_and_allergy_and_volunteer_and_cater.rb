@@ -1,0 +1,4 @@
+class AddCompostAndRecycleAndLocalAndEnergyAndBeerAndWineAndDonatefoodAndDonatemoneyAndAllergyAndVolunteerAndCater < ActiveRecord::Migration
+  def change
+  end
+end

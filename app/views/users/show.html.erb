@@ -6,6 +6,11 @@
 </p>
 
 <p>
+  <strong>Restaurant Hours:</strong>
+  <%= @user.hour %>
+</p>
+
+<p>
   <strong>Address:</strong>
   <%= @user.address %>
 </p>
@@ -23,6 +28,48 @@
 <p>
   <strong>Description:</strong>
   <%= @user.description %>
+</p>
+
+<p>
+  <strong>Menu Categories:</strong>
+  <%= @user.categories %>
+</p>
+
+<p>
+<strong>Restaurant Profile:</strong>
+  <% if @user.compost == true %>
+  <p>We Compost!</p>
+  <% end %>
+  <% if @user.recycle == true %>
+  <p>Recycle</p>
+  <% end %>
+  <% if @user.local == true %>
+  <p>WE local</p>
+  <% end %>
+  <% if @user.energy == true %>
+  <p>Energy</p>
+  <% end %>
+  <% if @user.beer == true %>
+  <p>Local Beer</p>
+  <% end %>
+  <% if @user.wine == true %>
+  <p>Local Wine</p>
+  <% end %>
+  <% if @user.donatefood == true %>
+  <p>We donate excess food</p>
+  <% end %>
+  <% if @user.donatemoney == true %>
+  <p>We donate money to charity</p>
+  <% end %>
+  <% if @user.allergy == true %>
+  <p>We are willing to display allergen information</p>
+  <% end %>
+  <% if @user.volunteer == true %>
+  <p>We provide opportunity for volunteering to our employees</p>
+  <% end %>
+  <% if @user.cater == true %>
+  <p>We will cater events</p>
+  <% end %>
 </p>
 
 <p>
