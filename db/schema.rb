@@ -11,21 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150727182618) do
+ActiveRecord::Schema.define(version: 20150804190638) do
 
   create_table "meals", force: :cascade do |t|
     t.string   "name"
     t.float    "price"
     t.boolean  "organic"
-    t.string   "labels"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.integer  "user_id"
-    t.text     "tag"
-    t.text     "ingredients"
-    t.string   "category"
-    t.boolean  "local"
-    t.boolean  "scratch"
     t.boolean  "cob"
     t.boolean  "cbf"
     t.boolean  "cls"
@@ -88,12 +82,6 @@ ActiveRecord::Schema.define(version: 20150727182618) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.string   "hours"
-    t.text     "categories"
-    t.string   "address"
-    t.decimal  "score"
-    t.text     "description"
-    t.text     "website"
     t.boolean  "cob"
     t.boolean  "cbf"
     t.boolean  "cls"
@@ -129,8 +117,12 @@ ActiveRecord::Schema.define(version: 20150727182618) do
     t.boolean  "allergy"
     t.boolean  "volunteer"
     t.boolean  "cater"
-    t.string   "category"
     t.text     "hour"
+    t.string   "address"
+    t.string   "website"
+    t.string   "score"
+    t.text     "description"
+    t.text     "categories"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
