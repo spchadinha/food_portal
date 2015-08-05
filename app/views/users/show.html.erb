@@ -6,8 +6,14 @@
 </p>
 
 <p>
-  <strong>Restaurant Hours:</strong>
-  <%= @user.hour %>
+  <strong>Restaurant Hours:</strong><br>
+  Monday: <%= @user.mon %><br>
+  Tuesday: <%= @user.tue %><br>
+  Wednesday: <%= @user.wed %><br>
+  Thursday: <%= @user.thu %><br>
+  Friday: <%= @user.fri %><br>
+  Saturday: <%= @user.sat %><br>
+  Sunday: <%= @user.sun %>
 </p>
 
 <p>
@@ -36,115 +42,115 @@
 </p>
 
 <p>
-<strong>Restaurant Profile:</strong>
+<strong>Restaurant Profile:</strong><br>
   <% if @user.compost == true %>
-  <p>We Compost!</p>
+  We Compost <br>
   <% end %>
   <% if @user.recycle == true %>
-  <p>Recycle</p>
+  We Recycle <br>
   <% end %>
   <% if @user.local == true %>
-  <p>WE local</p>
+  We source locally <br>
   <% end %>
   <% if @user.energy == true %>
-  <p>Energy</p>
+  We use ENERGY STAR appliances<br>
   <% end %>
   <% if @user.beer == true %>
-  <p>Local Beer</p>
+  We offer local alcohol<br>
   <% end %>
   <% if @user.wine == true %>
-  <p>Local Wine</p>
+  Local Wine<br>
   <% end %>
   <% if @user.donatefood == true %>
-  <p>We donate excess food</p>
+  We donate prepared food to charity<br>
   <% end %>
   <% if @user.donatemoney == true %>
-  <p>We donate money to charity</p>
+  We donate money to charity<br>
   <% end %>
   <% if @user.allergy == true %>
-  <p>We are willing to display allergen information</p>
+  We provide allergen information upon request<br>
   <% end %>
   <% if @user.volunteer == true %>
-  <p>We provide opportunity for volunteering to our employees</p>
+  We provide opportunity for volunteering to our employees<br>
   <% end %>
   <% if @user.cater == true %>
-  <p>We will cater events</p>
+  We offer catering services<br>
   <% end %>
 </p>
 
 <p>
   <strong>Sustainaibility Labels:</strong>
   <% if @user.cob == true %>
-  <p>COB</p>
+  <p>Certified Bird Friendly</p>
   <% end %>
   <% if @user.cbf == true %>
-  <p>CBF</p>
+  <p>Certified Bird Friendly</p>
   <% end %>
   <% if @user.cls == true %>
-  <p>CLS</p>
+  <p>Certified Local Sustainable</p>
   <% end %>
   <% if @user.ifo == true %>
-  <p>IFO</p>
+  <p>IFOAM-endorsed standard Certified Organic</p>
   <% end %>
   <% if @user.dcb == true %>
-  <p>DCB</p>
+  <p>Demeter Certified Biodynamic</p>
   <% end %>
   <% if @user.euo == true %>
-  <p>EUO</p>
+  <p>European Union Organic</p>
   <% end %>
   <% if @user.fac == true %>
-  <p>FAC</p>
+  <p>Food Alliance Certified</p>
   <% end %>
   <% if @user.msc == true %>
-  <p>MSC</p>
+  <p>Marine Stewardship Council Blue Ecolabel</p>
   <% end %>
   <% if @user.mba == true %>
-  <p>MBA</p>
+  <p>Monterey Bay Aquarium Seafood Watch “Best Choices”</p>
   <% end %>
   <% if @user.phc == true %>
-  <p>PHC</p>
+  <p>Protected Harvest Certified</p>
   <% end %>
   <% if @user.rac == true %>
-  <p>RAC</p>
+  <p>Rainforest Alliance Certified</p>
   <% end %>
   <% if @user.usda == true %>
-  <p>USDA</p>
+  <p>USDA Certified Organic</p>
   <% end %>
   <% if @user.eft == true %>
-  <p>EFT</p>
+  <p>Ecocert Fair Trade</p>
   <% end %>
   <% if @user.ffs == true %>
-  <p>FFS</p>
+  <p>Fair Food Standards Council</p>
   <% end %>
   <% if @user.fl == true %>
-  <p>FL</p>
+  <p>Fair for Life</p>
   <% end %>
   <% if @user.f == true %>
-  <p>F</p>
+  <p>Fairtrade</p>
   <% end %>
   <% if @user.fw == true %>
-  <p>FW</p>
+  <p>FairWild Certified</p>
   <% end %>
   <% if @user.fjc == true %>
-  <p>FJC</p>
+  <p>Food Justice Certified</p>
   <% end %>
   <% if @user.sps == true %>
-  <p>SPS</p>
+  <p>Small Producers’ Symbol</p>
   <% end %>
   <% if @user.aga == true %>
-  <p>AGA</p>
+  <p>AGA Grassfed</p>
   <% end %>
   <% if @user.ahc == true %>
-  <p>AHC</p>
+  <p>American Humane Certified</p>
   <% end %>
   <% if @user.awa == true %>
-  <p>AWA</p>
+  <p>Animal Welfare Approved</p>
   <% end %>
   <% if @user.chr == true %>
-  <p>CHR</p>
+  <p>Certified Humane Raised and Handled</p>
   <% end %>
   <% if @user.gap == true %>
-  <p>GAP</p>
+  <p>Global Animal Partnership Certified</p>
   <% end %>
 </p>
 

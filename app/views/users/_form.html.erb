@@ -24,9 +24,17 @@
     <%= f.text_field :rest_name, placeholder:"ex. Zouper Kitchen", class: "form-control" %>
   </div>
 
+
+
   <div class="field">
     <%= f.label "Please add your restaurant's hours" %><br>
-    <%= f.text_area :hour, placeholder:"Monday: 11am-10pm, Tuesday: 9am-10pm", class: "form-control" %>
+    <%= f.text_field :mon, placeholder:"Monday hours", class: "form-control" %>
+    <%= f.text_field :tue, placeholder:"Tuesday hours", class: "form-control" %>
+    <%= f.text_field :wed, placeholder:"Wednesday hours", class: "form-control" %>
+    <%= f.text_field :thu, placeholder:"Thursday hours", class: "form-control" %>
+    <%= f.text_field :fri, placeholder:"Friday hours", class: "form-control" %>
+    <%= f.text_field :sat, placeholder:"Saturday hours", class: "form-control" %>
+    <%= f.text_field :sun, placeholder:"Sunday hours", class: "form-control" %>
   </div>
 
   <div class="field">
@@ -53,9 +61,11 @@
     <%= f.label "Please add a description of your restaurant" %><br>
     <%= f.text_area :description, placeholder:"Description here", class: "form-control" %>
   </div>
-  <%= f.label "Sustainability Labels:" %><br>
+
+
+  <%= f.label "Check the Sustainability Labels that can be found on products in your restaurant:" %><br>
   <div class="field skinny">
-    <%= f.check_box :cob %><%= f.label "Canada Organic Biologique" %><br>
+
     <%= f.check_box :cbf %><%= f.label "Certified Bird Friendly" %><br>
     <%= f.check_box :cls %><%= f.label "Certified Local Sustainable" %><br>
     <%= f.check_box :ifo %><%= f.label "IFOAM-endorsed standard Certified Organic" %><br>
@@ -81,17 +91,17 @@
     <%= f.check_box :gap %><%= f.label "Global Animal Partnership Certified" %>
   </div>
   
-  <%= f.label "Sustainability Labels:" %><br>
+  <%= f.label "Other Restaurant Sustainability information:" %><br>
   <div class="field skinny">
     <%= f.check_box :compost %><%= f.label "Do you compost?" %><br>
     <%= f.check_box :recycle %><%= f.label "Do you recycle?" %><br>
     <%= f.check_box :local %><%= f.label "Do you offer local food?" %><br>
     <%= f.check_box :energy %><%= f.label "Do you use Energy Star appliances?" %><br>
-    <%= f.check_box :beer %><%= f.label "Do you offer local beer?" %><br>
-    <%= f.check_box :wine %><%= f.label "Do you offer local wine?" %><br>
+    <%= f.check_box :beer %><%= f.label "Do you offer local alcohol?" %><br>
+
     <%= f.check_box :donatefood %><%= f.label "Do you donate excess food to charity?" %><br>
-    <%= f.check_box :donatemoney %><%= f.label "Do you donate money to charity?" %>
-    <%= f.check_box :allergy %><%= f.label "Are you willing to display allergy information?" %><br>
+    <%= f.check_box :donatemoney %><%= f.label "Do you donate money to charity?" %><br>
+    <%= f.check_box :allergy %><%= f.label "Allergen information is available upon request" %><br>
     <%= f.check_box :volunteer %><%= f.label "Do you offer volunteer opportunities to your employees?" %><br>
     <%= f.check_box :cater %><%= f.label "Does your restaurant cater?" %>
   </div>

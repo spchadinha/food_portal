@@ -15,7 +15,48 @@
   <%= @meal.ingredient %>
 </p>
 
+<p>
+  <strong>Menu Category:</strong>
+  <%= @meal.category %>
+</p>
 
+<p>
+  <strong>Available Days</strong>
+  <% if @meal.m == true %>
+  <p>Monday</p>
+  <% end %>
+  <% if @meal.tu == true %>
+  <p>Tuesday</p>
+  <% end %>
+  <% if @meal.w == true %>
+  <p>Wednesday</p>
+  <% end %>
+  <% if @meal.th == true %>
+  <p>Thursday</p>
+  <% end %>
+  <% if @meal.fr == true %>
+  <p>Friday</p>
+  <% end %>
+  <% if @meal.sa == true %>
+  <p>Saturday</p>
+  <% end %>
+  <% if @meal.su == true %>
+  <p>Sunday</p>
+  <% end %>
+</p>  
+
+<p>
+  <strong>Dish Details</strong>
+  <% if @meal.scratch == true %>
+  <p>Made From Scratch</p>
+  <% end %>
+  <% if @meal.local == true %>
+  <p>Made with Local Ingredients</p>
+  <% end %>
+  <% if @meal.season == true %>
+  <p>Made with Seasonal Ingredients</p>
+  <% end %>
+</p>
 
 <p>
   <strong>Sustainaibility Labels:</strong>

@@ -1,3 +1,8 @@
+<style type="text/css">
+  .skinny label {
+    font-weight: normal;
+  }
+  </style>
 
 <% if current_user.admin == true %>
 
@@ -28,11 +33,87 @@
     <%= f.text_area :ingredient, placeholder: "Input ingredients here", class: "form-control" %>
   </div>
 
-
-
   <div class="field">
+    <%= f.label "Please indicate which menu category this dish belongs to:" %>
+    <%= f.text_field :category, placeholder:current_user.categories, class: "form-control" %>
+  </div>
+
+  <%= f.label "Check the Sustainability Labels that are associated with this product" %><br>
+  <div class="field skinny">
+    <% if Date.current.wday == 0 %> 
+    <%= f.check_box :su %><%= f.label "Sunday" %> <%= Date.current %><br>
+    <%= f.check_box :m %><%= f.label "Monday" %> <%= Date.current+1 %><br>
+    <%= f.check_box :tu %><%= f.label "Tuesday" %> <%= Date.current+2 %><br>
+    <%= f.check_box :w %><%= f.label "Wednesday" %> <%= Date.current+3 %><br>
+    <%= f.check_box :th %><%= f.label "Thursday" %> <%= Date.current+4 %><br>
+    <%= f.check_box :fr %><%= f.label "Friday" %> <%= Date.current+5 %><br>
+    <%= f.check_box :sa %><%= f.label "Saturday" %> <%= Date.current+6 %><br>
+    <% end %>
+    <% if Date.current.wday == 1 %> 
+    <%= f.check_box :m %><%= f.label "Monday" %> <%= Date.current %><br>
+    <%= f.check_box :tu %><%= f.label "Tuesday" %> <%= Date.current+1 %><br>
+    <%= f.check_box :w %><%= f.label "Wednesday" %> <%= Date.current+2 %><br>
+    <%= f.check_box :th %><%= f.label "Thursday" %> <%= Date.current+3 %><br>
+    <%= f.check_box :fr %><%= f.label "Friday" %> <%= Date.current+4 %><br>
+    <%= f.check_box :sa %><%= f.label "Satday" %> <%= Date.current+5 %><br>
+    <%= f.check_box :su %><%= f.label "Sunday" %> <%= Date.current+6 %><br>
+    <% end %>
+    <% if Date.current.wday == 2 %> 
+    <%= f.check_box :tu %><%= f.label "Tuesday" %> <%= Date.current %><br>
+    <%= f.check_box :w %><%= f.label "Wednesday" %> <%= Date.current+1 %><br>
+    <%= f.check_box :th %><%= f.label "Thursday" %> <%= Date.current+2 %><br>
+    <%= f.check_box :fr %><%= f.label "Friday" %> <%= Date.current+3 %><br>
+    <%= f.check_box :sa %><%= f.label "Saturday" %> <%= Date.current+4 %><br>
+    <%= f.check_box :su %><%= f.label "Sunday" %> <%= Date.current+5 %><br>
+    <%= f.check_box :m %><%= f.label "Monday" %> <%= Date.current+6 %><br>
+    <% end %>
+    <% if Date.current.wday == 3 %> 
+    <%= f.check_box :w %><%= f.label "Wednesday" %> <%= Date.current %><br>
+    <%= f.check_box :th %><%= f.label "Thursday" %> <%= Date.current+1 %><br>
+    <%= f.check_box :fr %><%= f.label "Friday" %> <%= Date.current+2 %><br>
+    <%= f.check_box :sa %><%= f.label "Saturday" %> <%= Date.current+3 %><br>
+    <%= f.check_box :su %><%= f.label "Sunday" %> <%= Date.current+4 %><br>
+    <%= f.check_box :m %><%= f.label "Monday" %> <%= Date.current+5 %><br>
+    <%= f.check_box :tu %><%= f.label "Tuesday" %> <%= Date.current+6 %><br>
+    <% end %>
+    <% if Date.current.wday == 4 %> 
+    <%= f.check_box :th %><%= f.label "Thursday" %> <%= Date.current %><br>
+    <%= f.check_box :fr %><%= f.label "Friday" %> <%= Date.current+1 %><br>
+    <%= f.check_box :sa %><%= f.label "Saturday" %> <%= Date.current+2 %><br>
+    <%= f.check_box :su %><%= f.label "Sunday" %> <%= Date.current+3 %><br>
+    <%= f.check_box :m %><%= f.label "Monday" %> <%= Date.current+4 %><br>
+    <%= f.check_box :tu %><%= f.label "Tuesday" %> <%= Date.current+5 %><br>
+    <%= f.check_box :w %><%= f.label "Wednesday" %> <%= Date.current+6 %><br>
+    <% end %>
+    <% if Date.current.wday == 5 %> 
+    <%= f.check_box :fr %><%= f.label "Friday" %> <%= Date.current %><br>
+    <%= f.check_box :sa %><%= f.label "Saturday" %> <%= Date.current+1 %><br>
+    <%= f.check_box :su %><%= f.label "Sunday" %> <%= Date.current+2 %><br>
+    <%= f.check_box :m %><%= f.label "Monday" %> <%= Date.current+3 %><br>
+    <%= f.check_box :tu %><%= f.label "Tuesday" %> <%= Date.current+4 %><br>
+    <%= f.check_box :w %><%= f.label "Wednesday" %> <%= Date.current+5 %><br>
+    <%= f.check_box :th %><%= f.label "Thursday" %> <%= Date.current+6 %><br>
+    <% end %>
+    <% if Date.current.wday == 6 %> 
+    <%= f.check_box :sa %><%= f.label "Saturday" %> <%= Date.current %><br>
+    <%= f.check_box :su %><%= f.label "Sunday" %> <%= Date.current+1 %><br>
+    <%= f.check_box :m %><%= f.label "Monday" %> <%= Date.current+2 %><br>
+    <%= f.check_box :tu %><%= f.label "Tuesday" %> <%= Date.current+3 %><br>
+    <%= f.check_box :w %><%= f.label "Wednesday" %> <%= Date.current+4 %><br>
+    <%= f.check_box :th %><%= f.label "Thursday" %> <%= Date.current+5 %><br>
+    <%= f.check_box :fr %><%= f.label "Friday" %> <%= Date.current+6 %><br>
+    <% end %>
+  </div>
+
+   <%= f.label "Please indicate if this dish has any of the following qualities:" %><br>
+  <div class="field skinny">
+    <%= f.check_box :scratch %><%= f.label "Made From Scratch" %><br>
+    <%= f.check_box :local %><%= f.label "Made with Local Ingredients" %><br>
+    <%= f.check_box :season %><%= f.label "Made with seasonal ingredients" %><br>
+  </div>
+
+  <div class="field skinny">
     <%= f.label "Sustainability Labels:" %><br>
-    <%= f.check_box :cob %><%= f.label "Canada Organic Biologique " %><br>
     <%= f.check_box :cbf %><%= f.label "Certified Bird Friendly" %><br>
     <%= f.check_box :cls %><%= f.label "Certified Local Sustainable" %><br>
     <%= f.check_box :ifo %><%= f.label "IFOAM-endorsed standard Certified Organic" %><br>
@@ -86,13 +167,13 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, placeholder: "Name of Dish", class: "form-control" %>
   </div>
-  <div class="field">
+   <div class="field form-group">
     <%= f.label :price %><br>
-    <%= f.text_field :price %>
+    <%= f.text_field :price, placeholder: "Price", class: "form-control" %>
   </div>
 
   <div class="field form-group">
@@ -100,12 +181,90 @@
     <%= f.text_area :ingredient, placeholder: "Input ingredients here", class: "form-control" %>
   </div>
 
-
-
   <div class="field">
-    <%= f.label "Sustainability Labels:" %><br>
-    <%= f.check_box :cob %><%= f.label "Canada Organic Biologique " %><br>
-    <%= f.check_box :cbf %><%= f.label "Certified Bird " %><br>
+    <%= f.label "Please indicate which menu category this dish belongs to:" %>
+    <%= f.text_field :category, placeholder:current_user.categories, class: "form-control" %>
+  </div>
+
+  <%= f.label "Please Indicate which days the item will be offered:" %><br>
+  <div class="field skinny">
+    <% if Date.current.wday == 0 %> 
+    <%= f.check_box :su %><%= f.label "Sunday" %> <%= Date.current %><br>
+    <%= f.check_box :m %><%= f.label "Monday" %> <%= Date.current+1 %><br>
+    <%= f.check_box :tu %><%= f.label "Tuesday" %> <%= Date.current+2 %><br>
+    <%= f.check_box :w %><%= f.label "Wednesday" %> <%= Date.current+3 %><br>
+    <%= f.check_box :th %><%= f.label "Thursday" %> <%= Date.current+4 %><br>
+    <%= f.check_box :fr %><%= f.label "Friday" %> <%= Date.current+5 %><br>
+    <%= f.check_box :sa %><%= f.label "Saturday" %> <%= Date.current+6 %><br>
+    <% end %>
+    <% if Date.current.wday == 1 %> 
+    <%= f.check_box :m %><%= f.label "Monday" %> <%= Date.current %><br>
+    <%= f.check_box :tu %><%= f.label "Tuesday" %> <%= Date.current+1 %><br>
+    <%= f.check_box :w %><%= f.label "Wednesday" %> <%= Date.current+2 %><br>
+    <%= f.check_box :th %><%= f.label "Thursday" %> <%= Date.current+3 %><br>
+    <%= f.check_box :fr %><%= f.label "Friday" %> <%= Date.current+4 %><br>
+    <%= f.check_box :sa %><%= f.label "Satday" %> <%= Date.current+5 %><br>
+    <%= f.check_box :su %><%= f.label "Sunday" %> <%= Date.current+6 %><br>
+    <% end %>
+    <% if Date.current.wday == 2 %> 
+    <%= f.check_box :tu %><%= f.label "Tuesday" %> <%= Date.current %><br>
+    <%= f.check_box :w %><%= f.label "Wednesday" %> <%= Date.current+1 %><br>
+    <%= f.check_box :th %><%= f.label "Thursday" %> <%= Date.current+2 %><br>
+    <%= f.check_box :fr %><%= f.label "Friday" %> <%= Date.current+3 %><br>
+    <%= f.check_box :sa %><%= f.label "Saturday" %> <%= Date.current+4 %><br>
+    <%= f.check_box :su %><%= f.label "Sunday" %> <%= Date.current+5 %><br>
+    <%= f.check_box :m %><%= f.label "Monday" %> <%= Date.current+6 %><br>
+    <% end %>
+    <% if Date.current.wday == 3 %> 
+    <%= f.check_box :w %><%= f.label "Wednesday" %> <%= Date.current %><br>
+    <%= f.check_box :th %><%= f.label "Thursday" %> <%= Date.current+1 %><br>
+    <%= f.check_box :fr %><%= f.label "Friday" %> <%= Date.current+2 %><br>
+    <%= f.check_box :sa %><%= f.label "Saturday" %> <%= Date.current+3 %><br>
+    <%= f.check_box :su %><%= f.label "Sunday" %> <%= Date.current+4 %><br>
+    <%= f.check_box :m %><%= f.label "Monday" %> <%= Date.current+5 %><br>
+    <%= f.check_box :tu %><%= f.label "Tuesday" %> <%= Date.current+6 %><br>
+    <% end %>
+    <% if Date.current.wday == 4 %> 
+    <%= f.check_box :th %><%= f.label "Thursday" %> <%= Date.current %><br>
+    <%= f.check_box :fr %><%= f.label "Friday" %> <%= Date.current+1 %><br>
+    <%= f.check_box :sa %><%= f.label "Saturday" %> <%= Date.current+2 %><br>
+    <%= f.check_box :su %><%= f.label "Sunday" %> <%= Date.current+3 %><br>
+    <%= f.check_box :m %><%= f.label "Monday" %> <%= Date.current+4 %><br>
+    <%= f.check_box :tu %><%= f.label "Tuesday" %> <%= Date.current+5 %><br>
+    <%= f.check_box :w %><%= f.label "Wednesday" %> <%= Date.current+6 %><br>
+    <% end %>
+    <% if Date.current.wday == 5 %> 
+    <%= f.check_box :fr %><%= f.label "Friday" %> <%= Date.current %><br>
+    <%= f.check_box :sa %><%= f.label "Saturday" %> <%= Date.current+1 %><br>
+    <%= f.check_box :su %><%= f.label "Sunday" %> <%= Date.current+2 %><br>
+    <%= f.check_box :m %><%= f.label "Monday" %> <%= Date.current+3 %><br>
+    <%= f.check_box :tu %><%= f.label "Tuesday" %> <%= Date.current+4 %><br>
+    <%= f.check_box :w %><%= f.label "Wednesday" %> <%= Date.current+5 %><br>
+    <%= f.check_box :th %><%= f.label "Thursday" %> <%= Date.current+6 %><br>
+    <% end %>
+    <% if Date.current.wday == 6 %> 
+    <%= f.check_box :sa %><%= f.label "Saturday" %> <%= Date.current %><br>
+    <%= f.check_box :su %><%= f.label "Sunday" %> <%= Date.current+1 %><br>
+    <%= f.check_box :m %><%= f.label "Monday" %> <%= Date.current+2 %><br>
+    <%= f.check_box :tu %><%= f.label "Tuesday" %> <%= Date.current+3 %><br>
+    <%= f.check_box :w %><%= f.label "Wednesday" %> <%= Date.current+4 %><br>
+    <%= f.check_box :th %><%= f.label "Thursday" %> <%= Date.current+5 %><br>
+    <%= f.check_box :fr %><%= f.label "Friday" %> <%= Date.current+6 %><br>
+    <% end %>
+  </div>
+
+   <%= f.label "Please indicate if this dish has any of the following qualities:" %><br>
+  <div class="field skinny">
+    <%= f.check_box :scratch %><%= f.label "Made From Scratch" %><br>
+    <%= f.check_box :local %><%= f.label "Made with Local Ingredients" %><br>
+    <%= f.check_box :season %><%= f.label "Made with seasonal ingredients" %><br>
+  </div>
+
+  <%= f.label "Please select any sustainability label associated with ingredients in this dish:" %><br>
+  
+    <%= f.label "Ecologically Sound" %><br>
+    <div class="field skinny">
+    <%= f.check_box :cbf %><%= f.label "Certified Bird Friendly" %><br>
     <%= f.check_box :cls %><%= f.label "Certified Local Sustainable" %><br>
     <%= f.check_box :ifo %><%= f.label "IFOAM-endorsed standard Certified Organic" %><br>
     <%= f.check_box :dcb %><%= f.label "Demeter Certified Biodynamic" %><br>
@@ -116,6 +275,10 @@
     <%= f.check_box :phc %><%= f.label "Protected Harvest Certified" %><br>
     <%= f.check_box :rac %><%= f.label "Rainforest Alliance Certified" %><br>
     <%= f.check_box :usda %><%= f.label "USDA Certified Organic" %><br>
+  </div>
+
+    <%= f.label "Fair" %><br>
+  <div class="field skinny">
     <%= f.check_box :eft %><%= f.label "Ecocert Fair Trade" %><br>
     <%= f.check_box :ffs %><%= f.label "Fair Food Standards Council" %><br>
     <%= f.check_box :fl %><%= f.label "Fair for Life" %><br>
@@ -123,6 +286,10 @@
     <%= f.check_box :fw %><%= f.label "FairWild Certified" %><br>
     <%= f.check_box :fjc %><%= f.label "Food Justice Certified " %><br>
     <%= f.check_box :sps %><%= f.label "Small Producers’ Symbol" %><br>
+  </div>
+
+    <%= f.label "Humane" %><br>
+    <div class="field skinny">
     <%= f.check_box :aga %><%= f.label "AGA Grassfed" %><br>
     <%= f.check_box :ahc %><%= f.label "American Humane Certified" %><br>
     <%= f.check_box :awa %><%= f.label "Animal Welfare Approved" %><br>
@@ -138,6 +305,7 @@
     <%= f.submit %>
   </div>
 <% end %>
+
 
 
 

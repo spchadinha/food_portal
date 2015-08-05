@@ -11,12 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150804190638) do
+ActiveRecord::Schema.define(version: 20150805190940) do
 
   create_table "meals", force: :cascade do |t|
     t.string   "name"
-    t.float    "price"
-    t.boolean  "organic"
+    t.string   "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "user_id"
@@ -45,6 +44,17 @@ ActiveRecord::Schema.define(version: 20150804190638) do
     t.boolean  "chr"
     t.boolean  "gap"
     t.text     "ingredient"
+    t.boolean  "m"
+    t.boolean  "tu"
+    t.boolean  "w"
+    t.boolean  "th"
+    t.boolean  "fr"
+    t.boolean  "sa"
+    t.boolean  "su"
+    t.boolean  "season"
+    t.boolean  "local"
+    t.boolean  "scratch"
+    t.string   "category"
   end
 
   create_table "taggings", force: :cascade do |t|
@@ -117,12 +127,18 @@ ActiveRecord::Schema.define(version: 20150804190638) do
     t.boolean  "allergy"
     t.boolean  "volunteer"
     t.boolean  "cater"
-    t.text     "hour"
     t.string   "address"
     t.string   "website"
     t.string   "score"
     t.text     "description"
     t.text     "categories"
+    t.string   "mon"
+    t.string   "tue"
+    t.string   "wed"
+    t.string   "thu"
+    t.string   "fri"
+    t.string   "sat"
+    t.string   "sun"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

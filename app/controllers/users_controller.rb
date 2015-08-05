@@ -69,6 +69,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:rest_name, :compost, :recycle, :categories, :hour, :local, :energy, :beer, :wine, :donatefood, :donatemoney, :allergy, :volunteer, :cater, :address, :website, :score, :description, :admin, :cob, :cbf, :cls, :ifo, :dcb, :euo, :fac, :msc, :mba, :phc, :rac, :usda, :eft, :ffs, :fl, :f, :fw, :fjc, :sps, :aga, :ahc, :awa, :chr, :gap)
+      params.require(:user).permit(:mon, :tue, :wed, :thu, :fri, :sat, :sun, :rest_name, :compost, :recycle, :categories, :hour, :local, :energy, :beer, :wine, :donatefood, :donatemoney, :allergy, :volunteer, :cater, :address, :website, :score, :description, :admin, :cob, :cbf, :cls, :ifo, :dcb, :euo, :fac, :msc, :mba, :phc, :rac, :usda, :eft, :ffs, :fl, :f, :fw, :fjc, :sps, :aga, :ahc, :awa, :chr, :gap)
     end
 end
